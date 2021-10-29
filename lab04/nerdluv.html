@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdluv</title>
+    <link rel="stylesheet" href= "CSS/nerdluv.css" type="text/css">
+</head>
+<body class="container">
+
+    <form action="http://mumstudents.org/params.php">
+        
+        <div>
+            <img class="head-img" src="./img/logo.png" alt=" logo">
+        </div>
+
+          <fieldset class="fieldset-connt">
+              <legend>
+                <span class="rectangle">
+                    New User SignUp:
+                </span> 
+              </legend>
+                
+
+                <div class ="flexinput">
+                    <label for ="nameLabel">Name</label>
+                    <input type="text" name ="fullname " id="nameLabel"/>
+                </div>
+
+                <div class ="flexinput">
+                    <label for ="genderm">Gender</label>
+                    <input type="radio" name ="gender" id="genderm" value="male"/>
+                    male
+                    <input type="radio" name ="gender" id="genderf" value="female" checked="checked"/>
+                    female
+                </div>
+
+                <div class ="flexinput">
+                    <label for ="age">Age</label>
+                    <input type="text" name =" " id="age"/>
+                </div>
+
+                <div class ="flexinput">
+                    <label for ="personal">Personal type:</label>
+                    <input type="text" name =" " id="personal"/>
+                    <span class="text-color">(Don't know your type?)</span>
+                </div>
+                <div class ="flexinput">
+                    <br>
+                    <label for ="osx">Favorite OS:</label>
+                    <select name="osx" id="osx">
+                        
+                        <option value="mac" selected="selected">Mac OSX </option>
+                        <option value="window">Windows</option>
+                        <option value="linux">Linux</option>
+                    </select>
+                </div>
+
+                <div class ="flexinput">
+                    <label>Seeking age:</label>
+                    <input class = "input2" type="text" name="min" placeholder="min" size="6" maxlength="2" pattern="\d{2}"> &nbsp;<br/>to &nbsp;
+                    <input class = "input2" type="text" name="max" placeholder="max" size="6" maxlength="2" pattern="\d{2}"><br>
+                    
+                </div>
+                <div>
+                    <button>SignUp
+
+                    </button>
+                </div>
+
+          </fieldset>
+
+    <div class="footer-part">
+        <p>This page is for dingle nerds to meet and date each other!
+          Type in your personal information and wait for the nerdly luv to begin!
+          Thank you for using our site.
+        </p>
+        <p>result and page (C) Copyright NerdLuv Inc.</p>
+        <a href="../index.html"><img src="img/back.jpg" alt="back icon" id="back-btn"><span class="text-color">Back to front
+            page</span></a>
+      
+        <br><br>
+      
+        <div class="validation-icon">
+          <a href="http://validator.w3.org/check?uri=https://hadismehari.github.io/lab04/nerdluv.html" target="_blank"> 
+            <img src="../images/w3c-html.png" alt="HTML Validator" /></a>
+        </div>
+  
+        <div class="validation-icon">
+          <a href="https://jigsaw.w3.org/css-validator/validator?urihttps:https://github.com/HadisMehari/.github.io/tree/main/lab04/nerdluv.css" target="_blank"> <img
+              src="../images/w3c-css.png" alt="CSS Validator" /></a>
+        </div>
+         
+    </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+.container{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+    margin-top: 200px;
+}
+.head-img {
+  display: flex;
+  padding: 50px;
+  padding-left: 200px;
+  align-items: center;
+
+}
+form{
+    background-color:#f3b28a;
+    padding: 40px;
+    width: 600px;
+    text-align: left; 
+}
+.flexinput{
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    flex-basis: 150px;
+    margin-top: 10px;
+}
+
+input[type=text]{
+    padding: 2px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.input2{
+    padding: 2px;
+    font-size: 16px;
+    margin-top: 10px;
+    
+}
+.text-color{
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+  button {
+      
+    background-color: darksalmon;
+    font-size: 14pt;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+   text-align: center;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+
+.footer-part {
+    margin-left: 300px;
+    margin-top: 50px;
+  }
+
+  .fieldset-connt {
+    margin: 10px;
+    
+    background-color: gray;
+  }
+
+  .rectangle{
+    
+      width:150px;
+      height:30px;
+      border:1px solid #000; 
+      position: relative;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: gray;
+      padding: 10px;
+    }
+
+  
+    #back-btn {
+      width: 20px;
+      height: 20px;
+    }
+
+    .validation-icon {
+      float: left;
+    }

@@ -1,0 +1,81 @@
+h1 span {
+    
+   
+    
+    font-weight: bold;
+    font-size:  22pt;
+    font-size: Lucida, Helvetica, Arial, sans-serif  ;
+    color: #A4A400 ;
+    background-color:#F0F0F0;
+    text-decoration: underline;
+    letter-spacing: .25rem;
+    text-align: center;
+    
+    }
+
+  
+    ol{
+      font-family: Arial, "Times New Roman", serif;
+      font-size: 16px;
+  }
+
+    img{
+        width: 300px;
+        height: 300px;
+    }
+
+    body{
+      
+      color: #404040;
+      background-color:#F0F0F0;
+      font-family: Georgia,  Garamond,   serif  ;
+      font-size: 11pts;
+    }
+
+    a {
+      color:  #A4A400 ;
+      font-family: Georgia,  Garamond,   serif  ;
+      font-size: 11pts;
+      
+    }
+
+    #smallImage {
+        width: 15px;
+        height: 15px;
+       
+        }
+
+        #backgrnd { /* any element with class="special" */
+        background-color:khaki;
+        
+        }
+
+        img.a {
+            width: 15px;
+            height: 15px;
+            text-indent: -2em;
+          }
+          
+          div.copyright {
+            
+            text-align: right;
+           
+          }
+          img.copyright{
+            width: 40px;
+            height: 30px;
+            
+              
+        }
+          
+          ul { 
+            font-family: Arial, "Times New Roman", serif;
+            font-size: 16px;
+            list-style-image: url("images/pie_icon.gif");
+               
+        } 
+
+        #devpic{
+          height:60px;
+                   
+      }

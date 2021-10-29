@@ -1,0 +1,63 @@
+h1 {
+    font: 2em Arial, Helvetica, sans-serif;
+    color:rgba(245, 241, 14, 0.959);
+    font-weight: bold;
+    }
+
+    p b {
+        font: 1em Arial, Helvetica, sans-serif;
+        color:rgb(243, 104, 11);
+        text-align: justify;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 18px;
+        }
+
+    p{
+        background-color: rgba(146, 136, 142, 0.116);
+        font-size: 18px;
+    }
+
+
+    ul{
+        font-family: Arial, "Times New Roman", serif;
+        font-size: 18px;
+    }
+
+    img{
+        width: 300px;
+        height: 300px;
+        border-color: red;
+       
+    }
+
+
+    #mission {
+        font-style: italic;
+        color: #000000;
+        }
+
+        .special { /* any element with class="special" */
+        background-color: yellow;
+        font-weight: bold;
+        }
+
+        p.shout { /* only p elements with class="shout" */
+        color: red;
+        font-family: cursive;
+        }
+
+
+        
+a:visited { 
+    color: #ff8800; 
+}
+#devpic{
+    height:350px;
+    width: 300px;
+    text-align: center;
+}
+#photoDec{
+    font-size: 1.5em;
+    font-weight: bold;
+}
