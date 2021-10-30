@@ -1,0 +1,32 @@
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16pt;
+}
+
+div {
+  margin: 0.5em;
+}
+
+input[type=text]{
+  padding: 2px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: darksalmon;
+  font-size: 20pt;
+  font-weight: bold;
+  height: 75px;
+  width: 200px;
+ text-align: center;
+  margin: 10px;
+  
+}
+
+.footer-part {
+  margin-left: 300px;
+  margin-top: 50px;
+}
