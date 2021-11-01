@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload =  ()=> {
   document.getElementById("decorator").onclick = btnClickHandler;
   document.getElementById("bling").onclick = blingHandler;
   document.getElementById("igpay").onclick = igpayAtinlay;
@@ -29,7 +29,8 @@ function blingHandler() {
     decorateArea.style.textDecoration = "underline";
     document.body.style.backgroundImage =
       "url('https://courses.cs.washington.edu/courses/cse190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg')";
-  } else {
+  } 
+  else {
     decorateArea.style.fontWeight = "normal";
     decorateArea.style.color = "black";
     decorateArea.style.textDecoration = "none";
@@ -43,7 +44,8 @@ function applyMalkovitch() {
   for (let i = 0; i < textData.length; i++) {
     if (textData[i].length >= 5) {
       converted.push("Malkovich");
-    } else {
+    } 
+    else {
       converted.push(textData[i]);
     }
   }
@@ -60,7 +62,8 @@ function igpayAtinlay() {
     if (textData[i].match(vowelRegx)) {
       newText = textData[i] + "ay";
       output.push(newText);
-    } else {
+    } 
+    else {
       newText = textData[i].substring(1) + textData[i][0];
       while (!newText.match(vowelRegx)) {
         newText = newText.substring(1) + newText[0];
