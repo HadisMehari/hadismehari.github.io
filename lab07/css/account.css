@@ -1,0 +1,11 @@
+input,
+button,
+textarea {
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+#deposit {
+  
+  margin-left: 47px;
+}

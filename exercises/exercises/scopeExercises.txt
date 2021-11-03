@@ -1,0 +1,138 @@
+Q1. Determine what this Javascript code will print out (without running it):
+  x = 1;
+  var a = 5;
+  var b = 10;
+  var c = function(a, b, c) {
+    var x = 10;
+    document.write(x);
+    document.write(a);
+    var f = function(a, b, c) {
+      b = a;
+      document.write(b);
+      b = c;
+      var x = 5;
+    }
+    f(a, b, c);
+    document.write(b);
+  }
+  c(8,9,10);
+  document.write(b);
+  document.write(x);
+  
+  ANSWER
+  ========
+  10    8   8   9   10    1
+
+Q2. What is the difference between a method and function?
+
+ANSWER
+======
+A function  is a block of code written to perform some specific set of tasks. 
+A method, like a function, is a set of instructions that perform a task. 
+The difference is that a method is associated with an object, while a function is not. 
+
+Q3. What does 'this' refer to when used in a Java method?
+
+ANSWER
+======
+To the object in context - which is the calling object.
+
+Q4. What does 'this' refer to when used in a JavaScript method?
+
+ANSWER
+======
+The JavaScript this keyword refers to the object it belongs to.
+
+It has different values depending on where it is used:
+
+    In a method, this refers to the owner object.
+    In a function, this refers to the global object.
+    In an event, this refers to the element that received the event.
+   
+
+
+
+Q5. What does 'this' refer to when used in a JavaScript constructor function?
+
+ANSWER
+======
+In JavaScript, when this keyword is used in a constructor function, 
+this refers to the object when the object is created.
+
+Q6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
+When f is called by x.f( ), what does 'this' refer to?
+
+ANSWER
+======
+object x
+Q7. What is a free variable in JavaScript?
+ANSWER
+=======
+Free variables are simply the variables that are neither locally declared nor passed as parameter.
+In javascript closures, those are simply the variables that the function takes (read and write) 
+in the enclosing scope where is declared the closure or in a parent scope.
+
+Q8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
+that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+
+ANSWER
+======
+  let obj = {
+    name: "fred",
+    major: "music",
+    compare: function(num1, num2){
+      if (num1 < num2)
+        return num1;
+      else if (num2 < num1)
+        return num2;
+      else
+        return num1 * num1;
+    }
+  };
+
+Q9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.
+Employee objects have the following fields: name, salary, position.
+
+ANSWER
+======
+function Employee(name, salary, position){
+  this.name = name;
+  this.salary = salary;
+  this.positoin = position;
+}
+
+Employee emp1 = new Employee("Hadis", 180000, "Software Designer");
+Employee emp2 = new Employee("Zolla", 1500000, "Software Engineer");
+Employee emp3 = new Employee("Zed", 160000, "Embedded System Developer");
+
+Q10. Write a Javascript function that takes any number of input arguments and returns the product of the
+arguments.
+
+ANSWER
+======
+function product(){
+  var products = 1;
+  for (let i = 0; i < arguments.length; i++){
+    products  *= arguments[i];
+  }
+
+  return products;
+}
+
+console.log(product(2, 3, 4,7));
+
+Q11. Write an arrow function that returns the maximum of its three input arguments.
+
+ANSWER
+======
+let minFunc = (num1, num2, num3) => {
+  let min = num1;
+  if (num2 < min)
+    min = num2;
+  if (num3 < min)
+    min = num3;
+
+  return min;
+}
+
+minFunc(98, 3, 56);

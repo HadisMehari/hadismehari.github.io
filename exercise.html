@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise</title>
+   
+      <script type="text/javascript">
+   
+      var x = 1; 
+      var a = 5;  
+      var b = 10;
+
+      var pt = {
+          x:4, y:3,
+          distanceFromOrign:function(){
+          return Math.sqrt(this.x*this.x + this.y*this.y)
+        }
+      };
+      document.write(pt.distanceFromOrign() + "<br/>");
+
+      function printMe(){
+       document.write("Hello World <br/>");
+     }
+
+     var obj = {
+       name: "professor Hadis",
+       department: "CS"
+     };
+
+     obj.print = printMe;
+     obj.print();
+     printMe();
+
+     var things = {
+       a:99,
+       b:100,
+       c:120,
+     }
+     for(k in things){
+       document.write(k + " "+ things[k]+"<br/>");
+     }
+
+
+
+
+
+
+      document.write("Welcome to Module");
+
+
+
+
+      var count = function(){
+        var counter = 0;
+        function incrementBy(val){
+          counter += val;
+          document.write("<br/> increment");
+          
+        }
+        function decrementBy(val){
+          counter -= val;
+          document.write("<br/> decrement");
+
+        }
+
+        return{
+          incrment:function() {
+            incrementBy(2);
+          },
+          decrement: function(){
+            decrementBy(3)
+          },
+          value: function(){
+            return counter;
+          }
+        };
+      };
+       myfunction  = count();
+     
+       myfunction.incrment();
+        var c = function(a, b, c) { 
+        var x = 10; 
+        document.write(x); 
+        document.write("<br/>"); 
+        document.write(a); 
+        document.write("<br/>"); 
+
+        var f = function(a, b, c) { 
+              b = a; 
+              document.write(b); 
+              b = c; 
+              var x = 5; 
+            } 
+            
+            f(a,b,c); 
+            document.write(b); 
+          } 
+      c(8,9,10); 
+      document.write(b); 
+      document.write("<br/>");
+      document.write(x); 
+   
+  </script>
+</head>
+<body >
+  
+  
+  </body>
+  </html>
+    
+   
