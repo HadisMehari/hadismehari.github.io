@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    console.log("<br/>========================================<br/>");
+
+    myfunction= function(name, rollnumber){
+        var name = name;
+        var rollnumber = rollnumber;
+       console.log(name +" " + rollnumber);
+        return{
+            f1:function(){
+                console.log(name +" " + rollnumber);
+            },
+
+            f2:function(){
+                return name +" " + rollnumber;
+            }
+
+        }
+    };
+
+    
+    var fun = myfunction("Hadis", 101);
+    fun.f1();
+    console.log(fun.f2());
+
+    console.log("<br/>========================================<br/>");
+
+    function myfunction(name, rollnumber){
+        this.name = name;
+        this.rollnumber = rollnumber;
+       console.log(this.name +" " + this.rollnumber);
+        return{
+            f1:function(){
+                console.log(this.name +" " + this.rollnumber);
+            },
+
+            f2:function(){
+                return this.name +" " + this.rollnumber;
+            }
+
+        }
+    };
+
+    
+    var fun = myfunction("Hadis", 101);
+    fun.f1();
+    var x =5;
+    console.log(fun.f2());
+    console.log(!!x);
+
+    let a = ["Stef", "Jason"]; // Stef, Jason 
+    console.log(a.push("Brian")); // Stef, Jason, Brian 
+    console.log(a.unshift("Kelly")); // Kelly, Stef, Jason, Brian 
+    console.log(a.pop()); // Kelly, Stef, Jason 
+    console.log(a.shift()); // Stef, Jason 
+    console.log(a.sort()); // Jason, Stef
+
+     a = [1,3,5,3,3]; 
+//translate/map all elements in an array to another set of values
+    const b = a.map(function(elem) {
+    return elem + 3;})
+    console.log(b); // [4,6,8,6,6]
+
+    const c = a.filter(function(elem){
+    return elem !== 3;});
+    console.log(c); //[1,5]
+
+    const d = a.reduce(function(prevVal, elem){
+    return prevVal + elem;});
+    console.log(d); //15
+
+    </script>
+
+<script>
+   
+   function printMe() {
+        print("I am " + this.name);
+    }
+    var name = "Alfred E. Newman";  
+    var teacher = {
+        name: "Prof. Tyler Durden",
+        department: "CS"
+    };  
+    teacher.address = "";
+    teacher.addressPrint = function(){
+        console.log(this.address);
+    };
+    teacher.addressPrint();
+  </script>
+  
+  </head>
+  <body >
+    <h1>Remove the subjects</h1>
+  <h2>The Subjects are as follows:</h2>
+  <ul>
+  <li >JavaScript <button>Remove</button></li>
+  <br>
+  <li>MySQL <button>Remove</button></li>
+  <br>
+  <li>MongoDB <button>Remove</button></li>
+  <br>
+  <li>Java <button>Remove</button></li>
+  </ul>
+
+
+    
+</body>
+</html>

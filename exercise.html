@@ -101,11 +101,376 @@
       document.write(b); 
       document.write("<br/>");
       document.write(x); 
+
+      document.write("<br/>===================================<br/>");
+      x = 1; 
+      var a = 5;  
+      var b = 10; 
+      var c = function(a, b, c) { 
+        document.write(x); 
+        document.write(a); 
+        var f = function(a, b, c) { 
+            b = a; 
+            document.write(b); 
+            b = c; 
+            var x = 5; 
+          } 
+        f(a,b,c); 
+        document.write(b); 
+        var x = 10; 
+      } 
+      c(8,9,10); 
+      document.write(b); 
+      document.write(x);  
+      document.write("<br/>===================================<br/>");
+      // Scope A  
+      var decrementBy = 1;
+      var optType = "Increment Operation";
+      function XFunc () {  
+        // Scope B 
+        document.write("<br/> Accessing Scope A: "+ optType +"<br/>") ;
+        var incrementBy = 1;
+         function YFunc () {  
+        // Scope C  
+          var sum = 10;
+          sum += incrementBy-decrementBy;
+          incrementBy += 2;
+          document.write("<br/>Accessing Scope B: " + sum + "<br/>");
+          return sum;
+        } 
+        document.write("<br/>Accessing Scope C: " + YFunc() + "<br/>");
+        return YFunc;
+        
+    }
+
+    var myFunction = XFunc();
+    myFunction();
+    myFunction();
+
+    
+ 
+    make_adder =function  (inc) { 
+      var counter = 0; 
+      document.write("hey");
+      
+      return function (){
+            return counter += inc;
+          }   
+     
+    } 
+
+     var add5 = make_adder(5);
+     var add7 = make_adder(7);
+     add5();
+     add5();
+    document.write(add5());
+
+    add7();
+    add7();
+    document.write(add7());
+
+    document.write("<br/>===================================<br/>");
+
+    var Employee = (function(){
+      var name; 
+      var age; 
+      var salary;
+      setAge = function(newAge) {
+        age= newAge;
+
+      };
+      setSalary = function(newSalary)  {
+        agsalarye= newSalary;
+
+      };
+      setName = function(newName)  {
+        name= newName;
+
+      };
+      setSalary = function(newSalary)  {
+        salary= newSalary;
+
+      };
+
+      getAge = function()  {
+        return age;
+
+      };
+
+      getSalary = function()  {
+        return salary;
+
+      };
+
+      getName = function()  {
+        return name;
+
+      };
+      increaseSalary = function(percentage){
+        salary += getSalary()*percentage/100;
+      };
+      incrementAge =function(incAge){
+        age = getAge() + incAge;
+      };
+      return{
+        incrementAge:incrementAge,
+        increaseSalary: increaseSalary,
+        setAge:setAge,
+        setSalary:setSalary,
+        setName:setName
+
+       /* getAge:getAge,
+        getSalary:getSalary,
+        getName:getName*/
+      };
+    })();
+
+    Employee.setAge(20);
+    Employee.setSalary(1000000);
+    Employee.setName("Hadis Mehari");
+    Employee.increaseSalary(20);
+    Employee.incrementAge(20);
+
+    /*document.write(Employee.getName());
+    document.write(Employee.getAge());
+    document.write(Employee.getSalary())*/
+   
+
+    document.write("<br/>===================================<br/>");
+
+    var Employee = (function(){
+      var name; 
+      var age; 
+      var salary;
+     
+
+      getAge = function()  {
+        document.write("<br/>"+age+"<br/>");
+        return age;
+
+      };
+
+      getSalary = function()  {
+        document.write("<br/>"+salary+"<br/>");
+        return salary;
+
+      };
+
+      getName = function()  {
+        return name;
+
+      };
+      
+      return{
+
+        setAge:function(newAge) {
+        age= newAge;
+
+      },
+      setSalary :function(newSalary)  {
+        agsalarye= newSalary;
+
+      },
+      setName:function(newName)  {
+        name= newName;
+
+      },
+      setSalary :function(newSalary)  {
+        salary= newSalary;
+
+      },
+      increaseSalary : function(percentage){
+        salary += getSalary()*percentage/100;
+      },
+      incrementAge : function(incAge){
+        age = getAge() + incAge;
+      }
+      
+      };
+    })();
+
+    Employee.setAge(40);
+    Employee.setSalary(1000000);
+    Employee.setName("Hadis Mehari");
+    Employee.increaseSalary(20);
+    Employee.incrementAge(20);
+
+    /*document.write(Employee.getName());
+    document.write(Employee.getAge());
+    document.write(Employee.getSalary())*/
+
+document.write("<br/>===================================<br/>");
+
+    var Employee = (function(){
+      var name; 
+      var age; 
+      var salary;
+     // locally scoped Object 
+      let myObject = {}; // "private" let
+
+      getAge = function()  {
+        document.write("<br/>"+age+"<br/>");
+        return age;
+
+      };
+
+      getSalary = function()  {
+        document.write("<br/>"+salary+"<br/>");
+        return salary;
+
+      };
+
+      getName = function()  {
+        return name;
+
+      };
+      
+      
+
+      myObject.setAge = function(newAge) {
+        age= newAge;
+
+      };
+      myObject.setSalary =function(newSalary)  {
+        agsalarye= newSalary;
+
+      };
+      myObject.setName = function(newName)  {
+        name= newName;
+
+      },
+      myObject.setSalary =function(newSalary)  {
+        salary= newSalary;
+
+      },
+      myObject.increaseSalary = function(percentage){
+        salary += getSalary()*percentage/100;
+      };
+      myObject.incrementAge = function(incAge){
+        age = getAge() + incAge;
+      }
+     return myObject;
+    })();
+
+    Employee.address;
+    Employee.setAddress = function(newAddress){
+      address = newAddress;
+    };
+    Employee.getAddress = function(){
+      return address;
+    };
+    
+
+
+    Employee.setAge(40);
+    Employee.setSalary(1000000);
+    Employee.setName("Hadis Mehari");
+    Employee.increaseSalary(20);
+    Employee.incrementAge(20);
+    Employee.setAddress("FairFiled IOWA 52557");
+    document.write(Employee.getAddress());
+    
+
+    
+    const promise = new Promise((resolve, reject) => { 
+      reject("Hattori"); 
+    }); 
+    document.write("<br/>===================================<br/>");
+    promise.then(val => alert("Success: " + val)) 
+       .catch(e => alert("Error: " + e));
+   
    
   </script>
-</head>
-<body >
+
+<script>   
+  function add_positivenos_async(n1, n2) {
+     let p = new Promise(function (resolve, reject) {
+        if (n1 >= 0 && n2 >= 0) {
+           //do some complex time consuming work
+           resolve(n1 + n2)
+        }
+        else
+           reject('NOT_Postive_Number_Passed') 
+        })
+        return p;
+  }
+
+  add_positivenos_async(10, 20)
+     .then(successHandler) // if promise resolved
+     .catch(errorHandler);// if promise rejected
+
+  add_positivenos_async(-10, -20)
+     .then(successHandler) // if promise resolved
+     .catch(errorHandler);// if promise rejected
+
+  function errorHandler(err) {
+     console.log('Handling error', err);
+  }
+  function successHandler(result) {
+     console.log('Handling success', result);
+  }
+
+  console.log('end');
+
+</script> 
+
+<script>   
+  function add_positivenos_async(n1, n2) {
+     let p = new Promise(function (resolve, reject) {
+        if (n1 >= 0 && n2 >= 0) {
+           //do some complex time consuming work
+           resolve(n1 + n2)
+        }
+        else
+           reject('NOT_Postive_Number_Passed')
+     })
+     return p;
+  }
+
+  add_positivenos_async(10,20)
+  .then(function(result){
+     console.log("first result",result)
+     return add_positivenos_async(result,result)
+  }).then(function(result){
+  console.log("second result",result)
+     return add_positivenos_async(result,result)
+  }).then(function(result){
+     console.log("third result",result)
+  })
+
+  console.log('end')
+
   
+const promise2 = new Promise((resolve, reject) => { 
+ 
+   setTimeout(()=> resolve("Yoshi"), 500);
+   reject("Hattori"); 
+}); 
+ 
+promise2.then(val => alert("Success: " + val)) 
+       .catch(e => alert("Error:" + e)); 
+
+
+       let completed = true;
+
+let learnJS = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        
+            resolve(alert("I have completed learning JS.")) }, 3 * 1000);
+        
+            reject(alert("I haven't completed learning JS yet."));
+        
+    
+});
+
+
+
+
+
+
+</script> 
+
+
   
   </body>
   </html>
