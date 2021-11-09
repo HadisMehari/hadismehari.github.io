@@ -1,0 +1,127 @@
+1.  Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if 
+they are. Explain why they can have different parameters and be equivalent, if they are equivalent.  
+ //code fragment 1  
+            $("li").each(function (idx, e) {
+                $(e).css("color", "yellow");
+            });
+
+            //code fragment 2  
+            $("li").each(function () {
+                $(this).css("color", "yellow");
+            });
+
+            //code fragment 3  
+            $("li").each(function (idx) {
+                $(this).css("color", "yellow");
+            });
+
+            
+        });
+
+jQuery’s each() function is used to loop through each element of the target jQuery object — an object that contains one or more DOM elements, 
+and exposes all jQuery functions. It’s very useful for multi-element DOM manipulation, as well as iterating over arbitrary arrays and object properties.
+
+the above 3 code fragments are equivalent because the all code segments bind to the same function body. in the first code segment e is a plain old DOM object
+We can upgrade it again using $ if we want e = $(e). e refers to the current DOM object. hence they are equivalent code segments 
+	
+
+2. Write a jQuery expression to find all divs on a page that include an unordered list in them, and make 
+their text color be blue. 
+ 
+        <div>no ul here </div> 
+        <div> 
+            This does contain a ul. 
+            <ul> 
+                <li>the first item</li> 
+                <li>the second item</li> 
+            </ul> 
+        </div> 
+        <script> 
+ 
+ <!—INSERT YOUR JQUERY CODE HERE  - - > 
+ 
+        </script> 
+    </body> 
+
+</html>
+
+Answer
+=====
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../JQuery/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div>no ul here </div>
+    <div>
+        This does contain a ul.
+        <ul>
+            <li>the first item</li>
+            <li>the second item</li>
+        </ul>
+    </div>
+    <script>
+
+
+        //INSERT YOUR JQUERY CODE HERE 
+        $(document).ready(function () {
+            $(document).find("ul").css("color", "blue");
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+3. Write jQuery code to append the following div element (and all of its contents) dynamically to the body 
+element. 
+ 
+<div><h1>JQuery Core</h1></div> 
+ 
+HTML: 
+    <!DOCTYPE html>   
+    <html>   
+    <head>   
+      <meta charset="utf-8">   
+      <title>JS Bin</title>   
+    </head>   
+    <body>   
+       
+    </body>   
+    </html> 
+
+ANSWER
+=======
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Bin</title>
+    <script src="../../JQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            var myElement = "<div><h1>JQuery Core</h1></div>";
+            $( myElement).appendTo( "body" );
+        });
+    </script>
+    
+</body>
+</html>
+ 
+ 
+ 
+ 
+    
